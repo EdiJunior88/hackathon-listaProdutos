@@ -1,54 +1,51 @@
-import React from 'react';
-import * as Yup from 'yup';
+import React, { useEffect, useState } from 'react';
+import MD5 from 'crypto-js/md5';
+import * as yup from 'yup';
 import { useFormik } from 'formik';
 import styles from './Formulario.module.css';
 
-const validacao = Yup.object().shape({
-  email: Yup.string()
-    .email('Informe um email válido!')
-    .required('O Email é obrigatório'),
-  cpf: Yup.string()
-    .max(11, 'O CPF deve ter 11 dígitos')
-    .cpf('Informe um CPF válido!')
-    .required('O CPF é obrigatório'),
-});
-
 const Formulario = () => {
-  const formik = useFormik({
-    initialValues: {
-      email: '',
-      cpf: '',
-    },
-    validationSchema: { validacao },
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
+  const [email, setEmail] = useState('');
+  const [cpf, setCPF] = useState('');
+  const [criptografado, setCriptografado] = useState(null);
+
+  console.log(email, cpf);
+
+  useEffect(() => {
+    setCriptografado(MD5(cpf).toString());
+  }, []);
+
+  useState(() => {}, []);
 
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <label htmlFor='email'>Email</label>
-      <input
-        id='email'
-        name='email'
-        type='email'
-        placeholder='Email'
-        onChange={formik.handleChange}
-        value={formik.values.email}
-      />
+    <div>
+      <form
+        onSubmit={(evento) => {
+          evento.preventDefault();
+        }}>
+        <label htmlFor='email'>Email</label>
+        <input
+          id='email'
+          name='email'
+          type='email'
+          placeholder='Email'
+          onChange={(evento) => setEmail(evento.target.value)}
+        />
+        <label htmlFor='cpf'>CPF</label>
+        <input
+          id='cpf'
+          name='cpf'
+          type='number'
+          placeholder='CPF'
+          onChange={(evento) => setCPF(evento.target.value)}
+        />
+        <button type='submit'>Entrar</button>
+      </form>
 
-      <label htmlFor='cpf'>CPF</label>
-      <input
-        id='cpf'
-        name='cpf'
-        type='text'
-        placeholder='CPF'
-        onChange={formik.handleChange}
-        value={formik.values.email}
-      />
-
-      <button type='submit'>Entrar</button>
-    </form>
+      <h1>
+        {email} - {criptografado}
+      </h1>
+    </div>
   );
 };
 
