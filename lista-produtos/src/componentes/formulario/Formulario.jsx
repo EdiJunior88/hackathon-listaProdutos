@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import MD5 from 'crypto-js/md5';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
@@ -8,25 +8,22 @@ const Formulario = () => {
   const [email, setEmail] = useState('');
   const [cpf, setCPF] = useState('');
   const [criptografado, setCriptografado] = useState(null);
-  const [valorCPF, setValorCPF] = useState('');
-
-  // console.log(email, cpf);
-
-  useEffect(() => {
-    setCriptografado(MD5(cpf).toString());
-  }, []);
 
   /* Função para deixar o input CPF somente com números */
   const somenteNumeros = (evento) => {
     const resultado = evento.target.value.replace(/\D/g, '');
-    setValorCPF(resultado);
+    setCPF(resultado);
   };
+
+  console.log(email+cpf);
 
   return (
     <div>
       <form
         onSubmit={(evento) => {
           evento.preventDefault();
+          // criptografando o valor do input CPF e transformando em string
+          setCriptografado(MD5(cpf).toString());
         }}>
         <label htmlFor='email'>Email</label>
         <input
@@ -43,7 +40,7 @@ const Formulario = () => {
           type='text'
           placeholder='CPF'
           maxLength={11}
-          value={valorCPF}
+          value={cpf}
           onChange={(evento) => {
             setCPF(evento.target.value);
             somenteNumeros(evento);
