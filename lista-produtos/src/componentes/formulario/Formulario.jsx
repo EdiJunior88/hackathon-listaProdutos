@@ -7,23 +7,32 @@ import styles from './Formulario.module.css';
 const Formulario = () => {
   const [email, setEmail] = useState('');
   const [cpf, setCPF] = useState('');
-  const [criptografado, setCriptografado] = useState(null);
+  const [criptografado, setCriptografado] = useState('');
 
   /* Função para deixar o input CPF somente com números */
   const somenteNumeros = (evento) => {
-    const resultado = evento.target.value.replace(/\D/g, '');
-    setCPF(resultado);
+    const input = evento.target.value.replace(/\D/g, '');
+    setCPF(input);
   };
 
-  console.log(email+cpf);
+  /* Função que criptografa o valor do input CPF e transformando em string */
+  function cpfCriptografado() {
+    setCriptografado(MD5(cpf).toString());
+  }
+
+  function salvarDados() {
+    localStorage.setItem('email', JSON.stringify(email));
+    localStorage.setItem('cpf', JSON.stringify(criptografado));
+  }
+
+  console.log(email + cpf);
 
   return (
     <div>
       <form
         onSubmit={(evento) => {
           evento.preventDefault();
-          // criptografando o valor do input CPF e transformando em string
-          setCriptografado(MD5(cpf).toString());
+          cpfCriptografado();
         }}>
         <label htmlFor='email'>Email</label>
         <input
@@ -33,6 +42,7 @@ const Formulario = () => {
           placeholder='Email'
           onChange={(evento) => setEmail(evento.target.value)}
         />
+
         <label htmlFor='cpf'>CPF</label>
         <input
           id='cpf'
@@ -46,12 +56,14 @@ const Formulario = () => {
             somenteNumeros(evento);
           }}
         />
-        <button type='submit'>Entrar</button>
+        <button type='submit' onClick={salvarDados}>
+          Entrar
+        </button>
       </form>
 
-      <h1>
-        {email} - {criptografado}
-      </h1>
+      <h3>
+        {email}-{cpf}-{criptografado}
+      </h3>
     </div>
   );
 };
