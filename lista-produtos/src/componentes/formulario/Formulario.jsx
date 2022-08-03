@@ -8,14 +8,19 @@ const Formulario = () => {
   const [email, setEmail] = useState('');
   const [cpf, setCPF] = useState('');
   const [criptografado, setCriptografado] = useState(null);
+  const [valorCPF, setValorCPF] = useState('');
 
-  console.log(email, cpf);
+  // console.log(email, cpf);
 
   useEffect(() => {
     setCriptografado(MD5(cpf).toString());
   }, []);
 
-  useState(() => {}, []);
+  /* Função para deixar o input CPF somente com números */
+  const somenteNumeros = (evento) => {
+    const resultado = evento.target.value.replace(/\D/g, '');
+    setValorCPF(resultado);
+  };
 
   return (
     <div>
@@ -35,9 +40,14 @@ const Formulario = () => {
         <input
           id='cpf'
           name='cpf'
-          type='number'
+          type='text'
           placeholder='CPF'
-          onChange={(evento) => setCPF(evento.target.value)}
+          maxLength={11}
+          value={valorCPF}
+          onChange={(evento) => {
+            setCPF(evento.target.value);
+            somenteNumeros(evento);
+          }}
         />
         <button type='submit'>Entrar</button>
       </form>
