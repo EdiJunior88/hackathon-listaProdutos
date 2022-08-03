@@ -62,7 +62,7 @@ const ListagemDeProdutos = () => {
                         <div className="card-body">
                             <div className="d-flex justify-content-between">
                                 <h6 className="card-title">
-                                    <span class="badge rounded-pill text-bg-secondary me-2">
+                                    <span className="badge rounded-pill text-bg-secondary me-2">
                                         03 Ago. 2022, Qua.
                                     </span>
                                     {ativ.descricao}

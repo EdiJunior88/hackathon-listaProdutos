@@ -1,13 +1,12 @@
-import React from "react";
-// import Login from "./paginas/login/Login";
-import ListagemDeProdutos from "./paginas/listagemDeProdutos/ListagemDeProdutos";
+import React from 'react';
+import Rotas from './rotas/Rotas';
 
-function App() {
-    return (
-        <>
-            <ListagemDeProdutos />
-        </>
-    );
-}
+const App = () => {
+  return (
+    <>
+      <Rotas />
+    </>
+  );
+};
 
 export default App;
