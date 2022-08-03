@@ -68,6 +68,7 @@ button {
   border: 0;
   padding: 8px 16px;
   transition: opacity .5s;
+  cursor: pointer;
 }
 
 button:focus,

@@ -7,32 +7,24 @@ import styles from './Formulario.module.css';
 const Formulario = () => {
   const [email, setEmail] = useState('');
   const [cpf, setCPF] = useState('');
-  const [criptografado, setCriptografado] = useState('');
 
-  /* Função para deixar o input CPF somente com números */
+  /* Função para deixar o input CPF formatado com números */
   const somenteNumeros = (evento) => {
     const input = evento.target.value.replace(/\D/g, '');
     setCPF(input);
   };
 
-  /* Função que criptografa o valor do input CPF e transformando em string */
-  function cpfCriptografado() {
-    setCriptografado(MD5(cpf).toString());
-  }
-
+  /* Função que salva os dados dos inputs (Email e CPF) no localStorage */
+  /* e criptografa os inputs em hash MD5 para string */
   function salvarDados() {
-    localStorage.setItem('email', JSON.stringify(email));
-    localStorage.setItem('cpf', JSON.stringify(criptografado));
+    localStorage.setItem('criptografia', MD5(email + cpf).toString());
   }
-
-  console.log(email + cpf);
 
   return (
     <div>
       <form
         onSubmit={(evento) => {
           evento.preventDefault();
-          cpfCriptografado();
         }}>
         <label htmlFor='email'>Email</label>
         <input
@@ -62,7 +54,7 @@ const Formulario = () => {
       </form>
 
       <h3>
-        {email}-{cpf}-{criptografado}
+        {email} - {cpf} - {MD5(email + cpf).toString()}
       </h3>
     </div>
   );
