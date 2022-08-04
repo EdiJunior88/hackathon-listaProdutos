@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import MD5 from 'crypto-js/md5';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
@@ -6,6 +7,11 @@ import { useFormik } from 'formik';
 const Formulario = () => {
   const [email, setEmail] = useState('');
   const [cpf, setCPF] = useState('');
+
+  const API_KEY = process.env.REACT_APP_AIRTABLE_API_KEY;
+  const navegacao = useNavigate();
+  const [gravacao, setGravacao] = useState([]);
+
 
   /* Função para deixar o input CPF formatado com números */
   const somenteNumeros = (evento) => {
@@ -41,8 +47,19 @@ const Formulario = () => {
       cpf: '',
     },
 
-    onSubmit: (values) => {
-      return <div>teste</div>;
+    onSubmit: () => {
+      fetch(
+        "https://api.airtable.com/v0/appky4xTJcWP3RBeN/Produtos/" +
+        encodeURI("({id_usuario}='localStorage.getItem('criptografia', MD5(email + cpf).toString())')"),
+        {
+          headers: {
+            Authorization: `Bearer ${API_KEY}`, 
+          },
+        } 
+      )
+      .then((response) => response.json())
+      .then((result) => setGravacao(result.records))
+      .catch((error) => console.error("error", error));
     },
   });
 
