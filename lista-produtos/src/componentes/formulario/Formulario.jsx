@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import MD5 from 'crypto-js/md5';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
@@ -17,9 +17,17 @@ const Formulario = () => {
   /* Função que salva os dados dos inputs (Email e CPF) no localStorage */
   /* e criptografa os inputs em hash MD5 para string */
   function salvarDados() {
-    localStorage.setItem('criptografia', MD5(email + cpf).toString());
+    const inputEmail = document.getElementById('email').value;
+    const inputCPF = document.getElementById('cpf').value;
+
+    /* Verifica se o input Email e CPF estão preenchidos */
+    /* para salvar o hash MD5 no localStorage */
+    if (inputEmail !== '' && inputCPF !== '') {
+      localStorage.setItem('criptografia', MD5(email + cpf).toString());
+    }
   }
 
+  /* Padronização dos input Email e CPF */
   const esquema = yup.object().shape({
     email: yup.string().email().required('Preencha o email'),
     cpf: yup.string().max(11).required('Preencha o CPF'),
@@ -33,18 +41,18 @@ const Formulario = () => {
       email: '',
       cpf: '',
     },
+
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      return <div>teste</div>;
     },
   });
-
 
   return (
     <div>
       <form
         onSubmit={(evento) => {
           evento.preventDefault();
-          formik.handleSubmit();
+          formik.handleSubmit(evento);
         }}>
         <label htmlFor='email'>Email</label>
         <input
@@ -57,7 +65,7 @@ const Formulario = () => {
             formik.handleChange(evento);
           }}
         />
-        {formik.errors.email && (<div>{formik.errors.email}</div>)}
+        {formik.errors.email && <div>{formik.errors.email}</div>}
 
         <label htmlFor='cpf'>CPF</label>
         <input
@@ -73,7 +81,7 @@ const Formulario = () => {
             formik.handleChange(evento);
           }}
         />
-        {formik.errors.cpf && (<div>{formik.errors.cpf}</div>)}
+        {formik.errors.cpf && <div>{formik.errors.cpf}</div>}
 
         <button type='submit' onClick={salvarDados}>
           Entrar
