@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import MD5 from 'crypto-js/md5';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
-import styles from './Formulario.module.css';
 
 const Formulario = () => {
   const [email, setEmail] = useState('');
