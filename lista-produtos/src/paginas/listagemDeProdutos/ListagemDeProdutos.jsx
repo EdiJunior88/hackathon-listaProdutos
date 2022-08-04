@@ -7,7 +7,7 @@ const ListagemDeProdutos = () => {
     const [lista, setLista] = useState([]);
     const API_KEY = process.env.REACT_APP_AIRTABLE_API_KEY;
 
-    useEffect(() => {
+    const chamandoLista = () => {
         fetch(
             "https://api.airtable.com/v0/appky4xTJcWP3RBeN/Produtos?filterByFormula=" +
                 encodeURI("({id_usuario}='0277a69cf889d21e9614966db20e858a')") +
@@ -24,6 +24,25 @@ const ListagemDeProdutos = () => {
             .then((response) => response.json())
             .then((result) => setLista(result.records))
             .catch((error) => console.error("error", error));
+    };
+
+    const deletarProduto = (id) => {
+        fetch(`https://api.airtable.com/v0/appky4xTJcWP3RBeN/Produtos/${id}`, {
+            method: "DELETE",
+            headers: {
+                Authorization: `Bearer ${API_KEY}`,
+            },
+        })
+            .then((response) => {
+                console.log(response);
+                response.json();
+                chamandoLista();
+            })
+            .catch((error) => console.error("error", error));
+    };
+
+    useEffect(() => {
+        chamandoLista();
     }, []);
 
     return (
@@ -54,8 +73,8 @@ const ListagemDeProdutos = () => {
             </form>
             <div className="mt-3">
                 <h5 className="card-title pb-3 pt-4">Listagem de Produtos</h5>
-                {lista.map((user, i) => (
-                    <div key={i} className="card mb-2 shadow-sm">
+                {lista.map((user) => (
+                    <div key={user.id} className="card mb-2 shadow-sm">
                         <div className="card-body">
                             <div className="d-flex justify-content-between">
                                 <h6 className="card-title">
@@ -73,7 +92,10 @@ const ListagemDeProdutos = () => {
                                         <BsFillPencilFill className="me-2" />
                                         Editar
                                     </button>
-                                    <button className="btn btn-sm  btn-danger">
+                                    <button
+                                        className="btn btn-sm  btn-danger"
+                                        onClick={() => deletarProduto(user.id)}
+                                    >
                                         <BsFillTrashFill className="me-2" />
                                         Deletar
                                     </button>
