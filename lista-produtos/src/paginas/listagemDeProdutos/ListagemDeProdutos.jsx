@@ -53,7 +53,7 @@ const ListagemDeProdutos = () => {
             <div className="card mt-5">
                 <CadastroProdutos chamarLista={() => chamandoLista()} />
             </div>
-            <div className="mt-3">
+            <div className="mt-3 mb-5">
                 <h5 className="card-title pb-3 pt-4">Listagem de Produtos</h5>
                 {lista.map((user) => (
                     <div key={user.id} className="card mb-2 shadow-sm">
