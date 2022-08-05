@@ -13,7 +13,7 @@ const CadastroProdutos = ({ chamarLista = () => {} }) => {
 
         base("Produtos").create(
             {
-                id_usuario: "0277a69cf889d21e9614966db20e858a",
+                id_usuario: localStorage.getItem("criptografia"),
                 nome: values.nomeProduto,
                 repeticao: parseInt(values.repetirQuantidade),
                 repeticao_dia: parseInt(values.diaSemana),
