@@ -1,8 +1,9 @@
 import React from 'react';
+import CadastroProdutos from '../../componentes/cadastroProdutos/CadastroProdutos';
 
 const Cadastro = () => {
   return(
-    <h1>Página Cadastro</h1>
+    <CadastroProdutos />
   )
 };
 
