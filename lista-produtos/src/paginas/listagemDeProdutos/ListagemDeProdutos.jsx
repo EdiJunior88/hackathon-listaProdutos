@@ -2,17 +2,20 @@ import React, { useEffect, useState } from "react";
 import { BsFillPencilFill, BsFillTrashFill } from "react-icons/bs";
 import { format } from "date-fns";
 import { pt } from "date-fns/locale";
+import CadastroProdutos from "../../componentes/cadastroProdutos/CadastroProdutos";
 
 const ListagemDeProdutos = () => {
     const [lista, setLista] = useState([]);
     const API_KEY = process.env.REACT_APP_AIRTABLE_API_KEY;
 
     const chamandoLista = () => {
+        // const tamanhoPag = 5; pageSize=${tamanhoPag}
+
         fetch(
-            "https://api.airtable.com/v0/appky4xTJcWP3RBeN/Produtos?filterByFormula=" +
+            `https://api.airtable.com/v0/appky4xTJcWP3RBeN/Produtos?&filterByFormula=` +
                 encodeURI("({id_usuario}='0277a69cf889d21e9614966db20e858a')") +
                 "&sort" +
-                encodeURI("[0][field]=nome") +
+                encodeURI("[0][field]=data_criacao") +
                 "&sort" +
                 encodeURI("[0][direction]=desc"),
             {
@@ -47,30 +50,9 @@ const ListagemDeProdutos = () => {
 
     return (
         <>
-            <form className="row g-3 m-0">
-                <div className="col-md-6">
-                    <label htmlFor="id" className="form-label">
-                        Id
-                    </label>
-                    <input id="id" type="text" className="form-control" />
-                </div>
-                <div className="col-md-6">
-                    <label htmlFor="descricao" className="form-label">
-                        Descrição
-                    </label>
-                    <input
-                        id="descricao"
-                        type="text"
-                        className="form-control"
-                    />
-                </div>
-                <hr />
-                <div className="col-12">
-                    <button type="submit" className="btn btn-warning">
-                        Cadastrar
-                    </button>
-                </div>
-            </form>
+            <div className="card mt-5">
+                <CadastroProdutos chamarLista={() => chamandoLista()} />
+            </div>
             <div className="mt-3">
                 <h5 className="card-title pb-3 pt-4">Listagem de Produtos</h5>
                 {lista.map((user) => (
@@ -80,7 +62,7 @@ const ListagemDeProdutos = () => {
                                 <h6 className="card-title">
                                     <span className="badge rounded-pill text-bg-secondary me-2">
                                         {format(
-                                            user.fields.encerramento * 1000,
+                                            user.fields.data_criacao * 1000,
                                             "dd MMM'. ' yyyy', ' EEE",
                                             { locale: pt }
                                         )}
