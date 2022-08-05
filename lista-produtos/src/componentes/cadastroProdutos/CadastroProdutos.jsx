@@ -5,7 +5,7 @@ import { parseISO } from "date-fns";
 const CadastroProdutos = ({ chamarLista = () => {} }) => {
     const API_KEY = process.env.REACT_APP_AIRTABLE_API_KEY;
 
-    const [terminaDia, setTerminaDia] = useState(1660521600);
+    const [terminaDia, setTerminaDia] = useState();
 
     const chamandoCadastro = (values) => {
         var Airtable = require("airtable");
@@ -33,9 +33,12 @@ const CadastroProdutos = ({ chamarLista = () => {} }) => {
     };
 
     const chamandoData = (e) => {
-        var pegarData = parseISO(e.target.value).getTime() / 1000;
-        // console.log("pegarData", pegarData);
-        setTerminaDia(pegarData);
+        if (!e.target.value === "") {
+            var pegarData = parseISO(e.target.value).getTime() / 1000;
+            console.log("pegarData", pegarData);
+            setTerminaDia(pegarData);
+        }
+        setTerminaDia(e.target.value);
     };
 
     return (
@@ -47,6 +50,7 @@ const CadastroProdutos = ({ chamarLista = () => {} }) => {
                             name="nomeProduto"
                             className="form-control"
                             placeholder="Nome do Produto"
+                            required
                         />
                     </div>
                     <div className="row g-3 mt-0">
@@ -64,6 +68,7 @@ const CadastroProdutos = ({ chamarLista = () => {} }) => {
                                 name="repetirQuantidade"
                                 className="form-control"
                                 placeholder="0"
+                                required
                             />
                         </div>
                         <div className="col-md-3">
@@ -92,6 +97,7 @@ const CadastroProdutos = ({ chamarLista = () => {} }) => {
                                 className="form-check-input"
                                 type="radio"
                                 name="repeticaoTermina"
+                                value=""
                                 checked
                             />
                             <label
