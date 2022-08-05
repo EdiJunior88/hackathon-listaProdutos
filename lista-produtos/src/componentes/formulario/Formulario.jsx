@@ -20,8 +20,11 @@ const Formulario = () => {
     setCPF(input);
   };
 
-  /* Função para remover os espaços do input Email */
+  /* Função para remover os espaços em branco do input Email */
   const somenteEmail = (evento) => {
+    if (evento.key === ' ') {
+      evento.preventDefault();
+    }
     const input = evento.target.value.replace(/\s+/g, '');
     setEmail(input);
   };
@@ -94,6 +97,7 @@ const Formulario = () => {
           name='email'
           type='email'
           placeholder='Email'
+          onKeyDown={somenteEmail}
           onChange={(evento) => {
             // setEmail(evento.target.value);
             somenteEmail(evento);
