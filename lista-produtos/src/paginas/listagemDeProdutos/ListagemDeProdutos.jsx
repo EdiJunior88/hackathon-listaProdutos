@@ -13,7 +13,11 @@ const ListagemDeProdutos = () => {
 
         fetch(
             `https://api.airtable.com/v0/appky4xTJcWP3RBeN/Produtos?&filterByFormula=` +
-                encodeURI("({id_usuario} = '" + localStorage.getItem('criptografia') + "')") +
+                encodeURI(
+                    "({id_usuario} = '" +
+                        localStorage.getItem("criptografia") +
+                        "')"
+                ) +
                 "&sort" +
                 encodeURI("[0][field]=data_criacao") +
                 "&sort" +
