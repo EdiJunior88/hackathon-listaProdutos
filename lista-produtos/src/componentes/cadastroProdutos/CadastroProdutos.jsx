@@ -43,6 +43,7 @@ const CadastroProdutos = ({ chamarLista = () => {} }) => {
 
     return (
         <div className="card-body">
+            <h5 className="card-title pb-3 pt-2">Cadastro de Produtos</h5>
             <Formik
                 initialValues={{
                     nomeProduto: "",
@@ -123,7 +124,7 @@ const CadastroProdutos = ({ chamarLista = () => {} }) => {
                                 name="repeticaoTermina"
                             />
                             <label
-                                className="form-check-label"
+                                className="form-check-label me-2"
                                 name="repeticaoTermina"
                             >
                                 Em:
