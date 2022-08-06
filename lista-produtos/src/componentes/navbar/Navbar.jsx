@@ -13,20 +13,20 @@ const Navbar = () => {
     };
 
     return (
-        <nav class="navbar navbar-expand-lg mt-3 border-bottom border-1">
+        <nav className="navbar navbar-expand-lg mt-3 border-bottom border-1">
             <div className="container mb-2">
-                <div class="navbar-brand m-0 h1">
+                <div className="navbar-brand m-0 h1">
                     <img
                         src={imagemLogo}
                         alt=""
                         width="30"
-                        class="d-inline-block align-text-top me-2 rounded-circle"
+                        className="d-inline-block align-text-top me-2 rounded-circle"
                     />
                     Ninja List
                 </div>
                 {local ? (
                     <button
-                        class="btn btn-warning me-2"
+                        className="btn btn-warning me-2"
                         type="button"
                         onClick={chamandoRedirec}
                     >
