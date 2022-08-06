@@ -3,6 +3,8 @@ import MD5 from 'crypto-js/md5';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 import { useNavigate } from 'react-router-dom';
+import { RiAlertFill } from 'react-icons/ri';
+import imagemLogo from '../../imagens/logo.jpg';
 
 const Formulario = () => {
   /* Atualiza o valor do input Email e CPF */
@@ -85,51 +87,87 @@ const Formulario = () => {
   });
 
   return (
-    <div>
-      <form
-        onSubmit={(evento) => {
-          evento.preventDefault();
-          formik.handleSubmit(evento);
-        }}>
-        <label htmlFor='email'>Email</label>
-        <input
-          id='email'
-          name='email'
-          type='email'
-          placeholder='Email'
-          onKeyDown={somenteEmail}
-          onChange={(evento) => {
-            // setEmail(evento.target.value);
-            somenteEmail(evento);
-            formik.handleChange(evento);
-          }}
-        />
-        {formik.errors.email && <div>{formik.errors.email}</div>}
+    <div className='container'>
+      <div className='row'>
+        <div className='col-sm-9 col-md-7 col-lg-6 mx-auto'>
+          <div className='card border-0 shadow rounded-3 my-5'>
+            {/* <a href="https://br.freepik.com/fotos-vetores-gratis/arte">Arte psd criado por freepik - br.freepik.com</a> */}
+            <div className='card-body p-4 p-sm-5'>
+              <div className='form-floating mb-3'>
+                <img
+                  className='rounded mx-auto d-block rounded-circle'
+                  style={{ width: '40%' }}
+                  src={imagemLogo}
+                  alt='imagem login'
+                />
 
-        <label htmlFor='cpf'>CPF</label>
-        <input
-          id='cpf'
-          name='cpf'
-          type='text'
-          placeholder='CPF'
-          maxLength={11}
-          value={cpf}
-          onChange={(evento) => {
-            // setCPF(evento.target.value);
-            somenteNumeros(evento);
-            formik.handleChange(evento);
-          }}
-        />
-        {formik.errors.cpf && <div>{formik.errors.cpf}</div>}
+                <h5 className='card-title text-center my-4 mb-4 fs-5'>
+                  Lista de Compras
+                </h5>
 
-        <button type='submit' onClick={salvarDados}>
-          Entrar
-        </button>
-      </form>
+                <form
+                  onSubmit={(evento) => {
+                    evento.preventDefault();
+                    formik.handleSubmit(evento);
+                  }}>
+                  <div className='form-outline'>
+                    <label
+                      className='form-label'
+                      htmlFor='email floatingInput'></label>
+                    <input
+                      id='email'
+                      name='email'
+                      type='email'
+                      className='form-control form-control-lg'
+                      placeholder='Email'
+                      onKeyDown={somenteEmail}
+                      onChange={(evento) => {
+                        somenteEmail(evento);
+                        formik.handleChange(evento);
+                      }}
+                    />
+                    {formik.errors.email && (
+                      <div className='alert alert-warning d-flex align-items-center is-invalid'>
+                        <RiAlertFill className='me-2' />
+                        {formik.errors.email}
+                      </div>
+                    )}
+                  </div>
+                  <div className='form-outline mb-4'>
+                    <label className='form-label' htmlFor='cpf'></label>
+                    <input
+                      id='cpf'
+                      name='cpf'
+                      type='text'
+                      className='form-control form-control-lg'
+                      placeholder='CPF'
+                      maxLength={11}
+                      value={cpf}
+                      onChange={(evento) => {
+                        somenteNumeros(evento);
+                        formik.handleChange(evento);
+                      }}
+                    />
+                    {formik.errors.cpf && (
+                      <div className='alert alert-warning d-flex align-items-center is-invalid'>
+                        <RiAlertFill className='me-2' />
+                        {formik.errors.cpf}
+                      </div>
+                    )}
+                  </div>
 
-      {/* <h3>
-        {email} - {cpf} - {MD5(email + cpf).toString()}
-      </h3> */}
+                  <button
+                    className='w-100 btn btn-lg btn-primary'
+                    type='submit'
+                    onClick={salvarDados}>
+                    Entrar
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
