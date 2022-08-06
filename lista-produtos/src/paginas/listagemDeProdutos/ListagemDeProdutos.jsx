@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { BsFillPencilFill, BsFillTrashFill } from "react-icons/bs";
+import { BsXLg } from "react-icons/bs";
 import { format } from "date-fns";
 import { pt } from "date-fns/locale";
 import CadastroProdutos from "../../componentes/cadastroProdutos/CadastroProdutos";
+import background from "../../assets/img/ninjalist-bakground.png";
 
 const ListagemDeProdutos = () => {
     const [lista, setLista] = useState([]);
@@ -54,7 +55,10 @@ const ListagemDeProdutos = () => {
 
     return (
         <>
-            <div className="card mt-5">
+            <div className="card mt-3">
+                <img src={background} className="card-img-top" alt="" />
+            </div>
+            <div className="card mt-4">
                 <CadastroProdutos chamarLista={() => chamandoLista()} />
             </div>
             <div className="mt-3 mb-5">
@@ -64,7 +68,7 @@ const ListagemDeProdutos = () => {
                         <div className="card-body">
                             <div className="d-flex justify-content-between">
                                 <h6 className="card-title">
-                                    <span className="badge rounded-pill text-bg-secondary me-2">
+                                    <span className="d-none d-sm-none d-xl-block badge rounded-pill text-bg-secondary mb-2">
                                         {format(
                                             user.fields.data_criacao * 1000,
                                             "dd MMM'. ' yyyy', ' EEE",
@@ -74,16 +78,11 @@ const ListagemDeProdutos = () => {
                                     {user.fields.nome}
                                 </h6>
                                 <div>
-                                    <button className="btn btn-sm btn-warning me-2">
-                                        <BsFillPencilFill className="me-2" />
-                                        Editar
-                                    </button>
                                     <button
-                                        className="btn btn-sm  btn-danger"
+                                        className="btn btn-sm"
                                         onClick={() => deletarProduto(user.id)}
                                     >
-                                        <BsFillTrashFill className="me-2" />
-                                        Deletar
+                                        <BsXLg />
                                     </button>
                                 </div>
                             </div>

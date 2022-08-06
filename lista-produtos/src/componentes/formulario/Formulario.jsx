@@ -4,7 +4,7 @@ import * as yup from "yup";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import { RiAlertFill } from "react-icons/ri";
-import imagemLogo from "../../imagens/logo.jpg";
+import imagemLogo from "../../assets/img/ninjalist-logo.png";
 
 const Formulario = () => {
     /* Atualiza o valor do input Email e CPF */
@@ -102,9 +102,12 @@ const Formulario = () => {
                                 alt="imagem login"
                             />
 
-                            <h5 className="card-title text-center my-4 mb-4 fs-5">
-                                Lista de Compras
-                            </h5>
+                            <h2 className="card-title text-center my-4 mb-1">
+                                Bem-vindo a Ninja List
+                            </h2>
+                            <p className="text-muted text-center">
+                                O melhor App para lista de compras
+                            </p>
 
                             <form
                                 onSubmit={(evento) => {
@@ -163,7 +166,7 @@ const Formulario = () => {
                                 </div>
 
                                 <button
-                                    className="w-100 btn btn-lg btn-primary"
+                                    className="w-100 btn btn-lg btn-warning"
                                     type="submit"
                                     onClick={salvarDados}
                                 >
