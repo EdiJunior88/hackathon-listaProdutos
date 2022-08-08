@@ -47,7 +47,7 @@ const CadastroProdutos = ({ chamarLista = () => {} }) => {
                 initialValues={{
                     nomeProduto: "",
                     repetirQuantidade: "",
-                    diaSemana: "0",
+                    diaSemana: "",
                 }}
                 onSubmit={(values, { resetForm }) => {
                     chamandoCadastro(values);
@@ -90,6 +90,7 @@ const CadastroProdutos = ({ chamarLista = () => {} }) => {
                                 as="select"
                                 className="form-select"
                             >
+                                <option value="" disabled>*** Selecione ***</option>
                                 <option value="0">Domingo</option>
                                 <option value="1">Segunda</option>
                                 <option value="2">Terça</option>
@@ -129,7 +130,7 @@ const CadastroProdutos = ({ chamarLista = () => {} }) => {
                             >
                                 Em:
                             </label>
-                            <input type="date" onChange={chamandoData} min={new Date().toISOString().split('T')[0]} value="2022-08-08" />
+                            <input type="date" onChange={chamandoData}/>
                         </div>
                     </div>
                     <hr className="mb-0" />
