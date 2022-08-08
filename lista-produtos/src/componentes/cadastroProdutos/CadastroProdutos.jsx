@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
-import { parseISO } from "date-fns";
 
 const CadastroProdutos = ({ chamarLista = () => {} }) => {
     const API_KEY = process.env.REACT_APP_AIRTABLE_API_KEY;
@@ -36,7 +35,7 @@ const CadastroProdutos = ({ chamarLista = () => {} }) => {
         if (e.target.value === "") {
             setTerminaDia(e.target.value);
         }
-        var pegarData = parseISO(e.target.value).getTime() / 1000;
+        var pegarData = new Date(e.target.value).getTime() / 1000;
         console.log("pegarData", pegarData);
         setTerminaDia(pegarData);
     };

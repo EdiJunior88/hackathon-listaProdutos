@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { BsXLg } from "react-icons/bs";
+import { BsXLg, BsCart3 } from "react-icons/bs";
 import { format } from "date-fns";
 import { pt } from "date-fns/locale";
 import CadastroProdutos from "../../componentes/cadastroProdutos/CadastroProdutos";
 import background from "../../assets/img/ninjalist-bakground.png";
+import { Link } from "react-router-dom";
 
 const ListagemDeProdutos = () => {
     const [lista, setLista] = useState([]);
@@ -62,7 +63,11 @@ const ListagemDeProdutos = () => {
                 <CadastroProdutos chamarLista={() => chamandoLista()} />
             </div>
             <div className="mt-3 mb-5">
-                <h5 className="card-title pb-3 pt-4">Listagem de Produtos</h5>
+                <h3 className="card-title pb-3 pt-4">Listagem de Produtos</h3>
+                <Link to="/calendario" className="btn btn-warning mb-3">
+                    Lista de Compras
+                    <BsCart3 className="ms-2 align-text-top" />
+                </Link>
                 {lista.map((user) => (
                     <div key={user.id} className="card mb-2 shadow-sm">
                         <div className="card-body">
