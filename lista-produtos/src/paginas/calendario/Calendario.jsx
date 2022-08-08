@@ -80,7 +80,7 @@ const Calendario = () => {
                     new Date(ano, mes, dia + Math.abs(diaTeste))
                 );
             } else {
-                diaCerto = getDate(new Date(ano, mes, dia + diaTeste));
+                diaCerto = getDate(new Date(ano, mes, dia - diaTeste));
             }
 
             // console.log(addDays(new Date(ano, mes, diaCerto), 7));
