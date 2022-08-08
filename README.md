@@ -95,9 +95,6 @@
   </tr>
 </table>
 
-<hr>
-<br>
-
 <p align="center">
   <img src="lista-produtos/src/assets/img/ninjalist-bakground.png" width='100%'>
 </p>
