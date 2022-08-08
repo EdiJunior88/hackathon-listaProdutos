@@ -47,6 +47,7 @@ const CadastroProdutos = ({ chamarLista = () => {} }) => {
                 initialValues={{
                     nomeProduto: "",
                     repetirQuantidade: "",
+                    diaSemana: "0",
                 }}
                 onSubmit={(values, { resetForm }) => {
                     chamandoCadastro(values);
@@ -128,7 +129,7 @@ const CadastroProdutos = ({ chamarLista = () => {} }) => {
                             >
                                 Em:
                             </label>
-                            <input type="date" onChange={chamandoData} />
+                            <input type="date" onChange={chamandoData} min={new Date().toISOString().split('T')[0]} value="2022-08-08" />
                         </div>
                     </div>
                     <hr className="mb-0" />
