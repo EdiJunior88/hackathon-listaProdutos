@@ -89,7 +89,7 @@
       <p>Edison Junior</p>
     </td>
     <td>
-      <img src="https://dl.airtable.com/.attachments/bea25623374b62cbf1a7906bd61efa84/1af4811e/edivaldo.jpeg?ts=1657053334&userId=usrMzvhMTiIiHP8jY&cs=ab15083fb1ab07c6" width="130px">
+      <img src="https://v5.airtableusercontent.com/v1/16/16/1682704800000/6ErN713Mc_hBMU2rnz0Cbw/TFEw9kbImMYI2_W_YWa19uRJ4A_6Jx8UlFaIyrlA1MHrJNe1ktZdcLacLUyoe2yftVYRCk0dbZBxeNjdRB2oEtgV9Xyicp4E7f25NV8nS5I/PcpAgvWqbWA5L4JGjEsjpKNDP4AnUeqFuHCiPlD2MxM" width="130px">
       <p>Edivaldo Reis</p>
     </td>
   </tr>
