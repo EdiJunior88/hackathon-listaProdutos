@@ -13,7 +13,7 @@
     "formik": "^2.4.5",
     "react": "^18.2.0",
     "react-big-calendar": "^1.8.4",
-    "react-bootstrap": "^2.8.0",
+    "react-bootstrap": "^2.9.0",
     "react-datepicker": "^4.18.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
