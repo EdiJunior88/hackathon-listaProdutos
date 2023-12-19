@@ -113,7 +113,7 @@ const Formulario = () => {
                 }}
               >
                 <div className="form-outline">
-                  <label className="form-label" htmlFor="email"></label>
+                  <label className="form-label" htmlFor="email" />
                   <input
                     id="email"
                     name="email"
@@ -135,7 +135,7 @@ const Formulario = () => {
                   )}
                 </div>
                 <div className="form-outline mb-4">
-                  <label className="form-label" htmlFor="cpf"></label>
+                  <label className="form-label" htmlFor="cpf" />
                   <input
                     id="cpf"
                     name="cpf"
