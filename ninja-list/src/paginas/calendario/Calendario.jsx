@@ -5,8 +5,15 @@ import { useEffect, useMemo, useState } from "react";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import { ptBR } from "date-fns/locale";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import { addDays, getDate, getDay, getMonth, getYear } from "date-fns";
-import { daysToWeeks, eachDayOfInterval } from "date-fns";
+import {
+  addDays,
+  getDate,
+  getDay,
+  getMonth,
+  getYear,
+  daysToWeeks,
+  eachDayOfInterval,
+} from "date-fns";
 import { Link } from "react-router-dom";
 
 const locales = {
@@ -32,7 +39,7 @@ const Calendario = () => {
     fetch(
       `https://api.airtable.com/v0/appmzousW9UQxa0xf/Produtos?&filterByFormula=` +
         encodeURI(
-          "({id_usuario} = '" + localStorage.getItem("criptografia") + "')",
+          "({id_usuario} = '" + localStorage.getItem("criptografia") + "')"
         ) +
         "&sort" +
         encodeURI("[0][field]=data_criacao") +
@@ -42,7 +49,7 @@ const Calendario = () => {
         headers: {
           Authorization: `Bearer ${API_KEY}`,
         },
-      },
+      }
     )
       .then((response) => response.json())
       .then((result) => {
@@ -52,7 +59,7 @@ const Calendario = () => {
   }, [API_KEY]);
 
   if (lista) {
-    for (let desc of lista) {
+    for (const desc of lista) {
       //-------- Data Inicial
       const data = desc.fields?.data_criacao * 1000;
       const ano = getYear(data);
@@ -98,7 +105,7 @@ const Calendario = () => {
         let result = 0;
         while (cont < resultadoN) {
           cont++;
-          let n = 7 * repetir;
+          const n = 7 * repetir;
           result += n;
           const data = addDays(new Date(ano, mes, diaCerto), result);
 
@@ -138,7 +145,7 @@ const Calendario = () => {
         let result = 0;
         while (cont < resultado) {
           cont++;
-          let n = 7 * repetir;
+          const n = 7 * repetir;
           result += n;
           const data = addDays(new Date(ano, mes, diaCerto), result);
 
@@ -171,24 +178,24 @@ const Calendario = () => {
         agenda: "Lista Completa",
       },
     }),
-    [],
+    []
   );
 
   return (
-    <div className="App">
-      <div className="">
-        <h1 className="mt-5">Lista de Compras</h1>
-        <Link to="/lista" className="btn btn-warning">
+    <div className='App'>
+      <div className=''>
+        <h1 className='mt-5'>Lista de Compras</h1>
+        <Link to='/lista' className='btn btn-warning'>
           Voltar
         </Link>
       </div>
       <Calendar
         culture={"pt-BR"}
-        defaultView="month"
+        defaultView='month'
         localizer={localizer}
         events={arrList}
-        startAccessor="start"
-        endAccessor="end"
+        startAccessor='start'
+        endAccessor='end'
         messages={messages}
         style={{ height: 500, margin: "50px" }}
       />

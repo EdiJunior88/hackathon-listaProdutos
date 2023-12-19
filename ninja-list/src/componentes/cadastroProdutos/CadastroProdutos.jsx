@@ -30,7 +30,7 @@ const CadastroProdutos = ({ chamarLista = () => {} }) => {
     if (e.target.value === "") {
       setTerminaDia(e.target.value);
     }
-    var pegarData = new Date(e.target.value).getTime() / 1000;
+    const pegarData = new Date(e.target.value).getTime() / 1000;
     setTerminaDia(pegarData);
   };
 

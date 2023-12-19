@@ -14,7 +14,7 @@ const Formulario = () => {
   /* Ocultar o token da API Airtable */
   /* Redireciona para a página escolhida */
   const API_KEY = import.meta.env.VITE_APP_AIRTABLE_API_KEY;
-  let navegacao = useNavigate();
+  const navegacao = useNavigate();
 
   /* Função para deixar o input CPF formatado com números */
   const somenteNumeros = (evento) => {

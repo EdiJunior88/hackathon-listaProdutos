@@ -4,7 +4,7 @@ import imagemLogo from "../../assets/img/ninjalist-logo.png";
 
 const Navbar = () => {
   const local = localStorage.getItem("criptografia");
-  let redireciona = useNavigate();
+  const redireciona = useNavigate();
 
   const chamandoRedirect = () => {
     localStorage.clear();
