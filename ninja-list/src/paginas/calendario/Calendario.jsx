@@ -39,7 +39,7 @@ const Calendario = () => {
     fetch(
       `https://api.airtable.com/v0/appmzousW9UQxa0xf/Produtos?&filterByFormula=` +
         encodeURI(
-          "({id_usuario} = '" + localStorage.getItem("criptografia") + "')"
+          "({id_usuario} = '" + localStorage.getItem("criptografia") + "')",
         ) +
         "&sort" +
         encodeURI("[0][field]=data_criacao") +
@@ -49,7 +49,7 @@ const Calendario = () => {
         headers: {
           Authorization: `Bearer ${API_KEY}`,
         },
-      }
+      },
     )
       .then((response) => response.json())
       .then((result) => {
@@ -178,24 +178,24 @@ const Calendario = () => {
         agenda: "Lista Completa",
       },
     }),
-    []
+    [],
   );
 
   return (
-    <div className='App'>
-      <div className=''>
-        <h1 className='mt-5'>Lista de Compras</h1>
-        <Link to='/lista' className='btn btn-warning'>
+    <div className="App">
+      <div className="">
+        <h1 className="mt-5">Lista de Compras</h1>
+        <Link to="/lista" className="btn btn-warning">
           Voltar
         </Link>
       </div>
       <Calendar
         culture={"pt-BR"}
-        defaultView='month'
+        defaultView="month"
         localizer={localizer}
         events={arrList}
-        startAccessor='start'
-        endAccessor='end'
+        startAccessor="start"
+        endAccessor="end"
         messages={messages}
         style={{ height: 500, margin: "50px" }}
       />
