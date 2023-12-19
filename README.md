@@ -3,7 +3,7 @@
 <h3>O melhor App para lista de compras</h3>
 
 <p align="center">
-  <img src="lista-produtos/src/assets/img/ninjalist-logo.png" width='100px'>
+  <img src="ninja-list/src/assets/img/ninjalist-logo.png" width='100px'>
 </p>
 
 <p>O aplicativo Ninja List irá te ajudar na hora de lembrar ou adicionar produtos na lista de compras, você inclusive poderá ver com mais detalhes o dia / semana / mês / ano de cada lista de compras.</p>
@@ -96,5 +96,5 @@
 </table>
 
 <p align="center">
-  <img src="lista-produtos/src/assets/img/ninjalist-bakground.png" width='100%'>
+  <img src="ninja-list/src/assets/img/ninjalist-bakground.png" width='100%'>
 </p>
