@@ -14,7 +14,7 @@ const Rotas = () => {
       <Routes>
         <Route
           exact
-          path='/'
+          path="/"
           element={
             <ChecarLogin>
               <Login />
@@ -23,7 +23,7 @@ const Rotas = () => {
         />
         <Route
           exact
-          path='/lista'
+          path="/lista"
           element={
             <ObrigarLogin>
               <ListagemDeProdutos />
@@ -32,7 +32,7 @@ const Rotas = () => {
         />
         <Route
           exact
-          path='/calendario'
+          path="/calendario"
           element={
             <ObrigarLogin>
               <Calendario />

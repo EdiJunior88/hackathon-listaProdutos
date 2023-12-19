@@ -14,13 +14,13 @@ const ListagemDeProdutos = () => {
     try {
       const response = await fetch(
         `https://api.airtable.com/v0/appmzousW9UQxa0xf/Produtos?&filterByFormula=${encodeURIComponent(
-          "({id_usuario} = '" + localStorage.getItem("criptografia") + "')"
+          "({id_usuario} = '" + localStorage.getItem("criptografia") + "')",
         )}&sort[0][field]=data_criacao&sort[0][direction]=desc`,
         {
           headers: {
             Authorization: `Bearer ${API_KEY}`,
           },
-        }
+        },
       );
       const result = await response.json();
       setLista(result.records);
@@ -49,36 +49,37 @@ const ListagemDeProdutos = () => {
 
   return (
     <>
-      <div className='card mt-3'>
-        <img src={background} className='card-img-top' alt='' />
+      <div className="card mt-3">
+        <img src={background} className="card-img-top" alt="" />
       </div>
-      <div className='card mt-4'>
+      <div className="card mt-4">
         <CadastroProdutos chamarLista={() => chamandoLista()} />
       </div>
-      <div className='mt-3 mb-5'>
-        <h3 className='card-title pb-3 pt-4'>Listagem de Produtos</h3>
-        <Link to='/calendario' className='btn btn-warning mb-3'>
+      <div className="mt-3 mb-5">
+        <h3 className="card-title pb-3 pt-4">Listagem de Produtos</h3>
+        <Link to="/calendario" className="btn btn-warning mb-3">
           Lista de Compras
-          <BsCart3 className='ms-2 align-text-top' />
+          <BsCart3 className="ms-2 align-text-top" />
         </Link>
         {lista.map((user) => (
-          <div key={user.id} className='card mb-2 shadow-sm'>
-            <div className='card-body'>
-              <div className='d-flex justify-content-between'>
-                <h6 className='card-title'>
-                  <span className='d-none d-sm-none d-xl-block badge rounded-pill text-bg-secondary mb-2'>
+          <div key={user.id} className="card mb-2 shadow-sm">
+            <div className="card-body">
+              <div className="d-flex justify-content-between">
+                <h6 className="card-title">
+                  <span className="d-none d-sm-none d-xl-block badge rounded-pill text-bg-secondary mb-2">
                     {format(
                       user.fields.data_criacao * 1000,
                       "dd MMM'. ' yyyy', ' EEE",
-                      { locale: pt }
+                      { locale: pt },
                     )}
                   </span>
                   {user.fields.nome}
                 </h6>
                 <div>
                   <button
-                    className='btn btn-sm'
-                    onClick={() => deletarProduto(user.id)}>
+                    className="btn btn-sm"
+                    onClick={() => deletarProduto(user.id)}
+                  >
                     <BsXLg />
                   </button>
                 </div>
