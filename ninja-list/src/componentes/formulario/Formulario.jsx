@@ -125,7 +125,7 @@ const Formulario = () => {
                       somenteEmail(evento);
                       formik.handleChange(evento);
                     }}
-                    autoComplete="auto"
+                    autoComplete="name"
                   />
                   {formik.errors.email && (
                     <div className="alert alert-warning d-flex align-items-center is-invalid">
@@ -148,7 +148,7 @@ const Formulario = () => {
                       somenteNumeros(evento);
                       formik.handleChange(evento);
                     }}
-                    autoComplete="auto"
+                    autoComplete="name"
                   />
                   {formik.errors.cpf && (
                     <div className="alert alert-warning d-flex align-items-center is-invalid">
