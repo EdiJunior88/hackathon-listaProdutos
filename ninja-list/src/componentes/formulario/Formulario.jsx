@@ -67,13 +67,13 @@ const Formulario = () => {
       fetch(
         "https://api.airtable.com/v0/appmzousW9UQxa0xf/Produtos?filterByFormula=" +
           encodeURI(
-            "({id_usuario} = '" + localStorage.getItem("criptografia") + "')"
+            "({id_usuario} = '" + localStorage.getItem("criptografia") + "')",
           ),
         {
           headers: {
             Authorization: `Bearer ${API_KEY}`,
           },
-        }
+        },
       )
         /* Redirecionamento do usuário para a página Cadastro de Compras */
         .then((response) => response.json())
@@ -87,22 +87,22 @@ const Formulario = () => {
   });
 
   return (
-    <div className='row'>
-      <div className='col-sm-9 col-md-7 col-lg-6 mx-auto'>
-        <div className='card border-0 shadow rounded-3 my-5'>
-          <div className='card-body p-4 p-sm-5'>
-            <div className='form-floating mb-3'>
+    <div className="row">
+      <div className="col-sm-9 col-md-7 col-lg-6 mx-auto">
+        <div className="card border-0 shadow rounded-3 my-5">
+          <div className="card-body p-4 p-sm-5">
+            <div className="form-floating mb-3">
               <img
-                className='rounded mx-auto d-block rounded-circle'
+                className="rounded mx-auto d-block rounded-circle"
                 style={{ width: "40%" }}
                 src={imagemLogo}
-                alt='imagem login'
+                alt="imagem login"
               />
 
-              <h2 className='card-title text-center my-4 mb-1'>
+              <h2 className="card-title text-center my-4 mb-1">
                 Bem-vindo a Ninja List
               </h2>
-              <p className='text-muted text-center'>
+              <p className="text-muted text-center">
                 O melhor App para lista de compras
               </p>
 
@@ -110,57 +110,59 @@ const Formulario = () => {
                 onSubmit={(evento) => {
                   evento.preventDefault();
                   formik.handleSubmit(evento);
-                }}>
-                <div className='form-outline'>
-                  <label className='form-label' htmlFor='email'></label>
+                }}
+              >
+                <div className="form-outline">
+                  <label className="form-label" htmlFor="email"></label>
                   <input
-                    id='email'
-                    name='email'
-                    type='email'
-                    className='form-control form-control-lg'
-                    placeholder='Email'
+                    id="email"
+                    name="email"
+                    type="email"
+                    className="form-control form-control-lg"
+                    placeholder="Email"
                     onKeyDown={somenteEmail}
                     onChange={(evento) => {
                       somenteEmail(evento);
                       formik.handleChange(evento);
                     }}
-                    autoComplete='auto'
+                    autoComplete="auto"
                   />
                   {formik.errors.email && (
-                    <div className='alert alert-warning d-flex align-items-center is-invalid'>
-                      <RiAlertFill className='me-2' />
+                    <div className="alert alert-warning d-flex align-items-center is-invalid">
+                      <RiAlertFill className="me-2" />
                       {formik.errors.email}
                     </div>
                   )}
                 </div>
-                <div className='form-outline mb-4'>
-                  <label className='form-label' htmlFor='cpf'></label>
+                <div className="form-outline mb-4">
+                  <label className="form-label" htmlFor="cpf"></label>
                   <input
-                    id='cpf'
-                    name='cpf'
-                    type='text'
-                    className='form-control form-control-lg'
-                    placeholder='CPF'
+                    id="cpf"
+                    name="cpf"
+                    type="text"
+                    className="form-control form-control-lg"
+                    placeholder="CPF"
                     maxLength={11}
                     value={cpf}
                     onChange={(evento) => {
                       somenteNumeros(evento);
                       formik.handleChange(evento);
                     }}
-                    autoComplete='auto'
+                    autoComplete="auto"
                   />
                   {formik.errors.cpf && (
-                    <div className='alert alert-warning d-flex align-items-center is-invalid'>
-                      <RiAlertFill className='me-2' />
+                    <div className="alert alert-warning d-flex align-items-center is-invalid">
+                      <RiAlertFill className="me-2" />
                       {formik.errors.cpf}
                     </div>
                   )}
                 </div>
 
                 <button
-                  className='w-100 btn btn-lg btn-warning'
-                  type='submit'
-                  onClick={salvarDados}>
+                  className="w-100 btn btn-lg btn-warning"
+                  type="submit"
+                  onClick={salvarDados}
+                >
                   Entrar
                 </button>
               </form>
