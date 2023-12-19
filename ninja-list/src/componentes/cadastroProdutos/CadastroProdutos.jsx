@@ -11,7 +11,7 @@ const CadastroProdutos = ({ chamarLista = () => {} }) => {
     try {
       const base = new Airtable({ apiKey: API_KEY }).base("appmzousW9UQxa0xf");
 
-      await base("Produtos").createAsync({
+      await base("Produtos").create({
         id_usuario: localStorage.getItem("criptografia"),
         nome: values.nomeProduto,
         repeticao: parseInt(values.repetirQuantidade),
