@@ -37,7 +37,7 @@ const Calendario = () => {
   useEffect(() => {
     arrList = [];
     fetch(
-      `https://api.airtable.com/v0/appmzousW9UQxa0xf/Produtos?&filterByFormula=` +
+      "https://api.airtable.com/v0/appmzousW9UQxa0xf/Produtos?&filterByFormula=" +
         encodeURI(
           "({id_usuario} = '" + localStorage.getItem("criptografia") + "')"
         ) +
