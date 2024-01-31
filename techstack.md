@@ -40,13 +40,16 @@ Full tech stack [here](/techstack.md)
 <div align="center">
 
 # Tech Stack File
+
 ![](https://img.stackshare.io/repo.svg "repo") [EdiJunior88/hackathon-listaProdutos](https://github.com/EdiJunior88/hackathon-listaProdutos)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
 |25<br/>Tools used|01/31/24 <br/>Report generated|
 |------|------|
+
 </div>
 
 ## <img src='https://img.stackshare.io/languages.svg'/> Languages (1)
+
 <table><tr>
   <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'>
@@ -60,6 +63,7 @@ Full tech stack [here](/techstack.md)
 </table>
 
 ## <img src='https://img.stackshare.io/frameworks.svg'/> Frameworks (3)
+
 <table><tr>
   <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/1101/C9QJ7V3X.png' alt='Bootstrap'>
@@ -89,6 +93,7 @@ Full tech stack [here](/techstack.md)
 </table>
 
 ## <img src='https://img.stackshare.io/devops.svg'/> DevOps (4)
+
 <table><tr>
   <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'>
@@ -126,6 +131,7 @@ Full tech stack [here](/techstack.md)
 </table>
 
 ## <img src='https://img.stackshare.io/saas.svg'/> Software as a Service (SaaS) (2)
+
 <table><tr>
   <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/1512/logo.png' alt='Airtable'>
@@ -147,6 +153,7 @@ Full tech stack [here](/techstack.md)
 </table>
 
 ## Other (3)
+
 <table><tr>
   <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/8846/preview.png' alt='Formik'>
@@ -175,25 +182,24 @@ Full tech stack [here](/techstack.md)
 </tr>
 </table>
 
-
 ## <img src='https://img.stackshare.io/group.svg' /> Open source packages (12)</h2>
 
 ## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (12)
 
-|NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
-|:------|:------|:------|:------|:------|:------|
-|[@types/react](https://www.npmjs.com/@types/react)|v18.2.48|01/21/24|renovate[bot] |MIT|N/A|
-|[@types/react-dom](https://www.npmjs.com/@types/react-dom)|v18.2.18|01/21/24|renovate[bot] |MIT|N/A|
-|[crypto-js](https://www.npmjs.com/crypto-js)|v4.2.0|12/19/23|EdiJunior88 |MIT|N/A|
-|[eslint-plugin-react](https://www.npmjs.com/eslint-plugin-react)|v7.33.2|01/21/24|renovate[bot] |MIT|N/A|
-|[eslint-plugin-react-hooks](https://www.npmjs.com/eslint-plugin-react-hooks)|v4.6.0|01/21/24|renovate[bot] |MIT|N/A|
-|[react-bootstrap](https://www.npmjs.com/react-bootstrap)|v2.10.0|01/21/24|renovate[bot] |MIT|N/A|
-|[react-datepicker](https://www.npmjs.com/react-datepicker)|v4.25.0|01/21/24|renovate[bot] |MIT|N/A|
-|[react-dom](https://www.npmjs.com/react-dom)|v18.2.0|01/21/24|renovate[bot] |MIT|N/A|
-|[react-icons](https://www.npmjs.com/react-icons)|v5.0.1|01/21/24|renovate[bot] |MIT|N/A|
-|[react-router-dom](https://www.npmjs.com/react-router-dom)|v6.21.3|01/21/24|renovate[bot] |MIT|N/A|
-|[vite](https://www.npmjs.com/vite)|v5.0.12|01/19/24|dependabot[bot] |N/A|N/A|
-|[yup](https://www.npmjs.com/yup)|v1.3.3|12/19/23|EdiJunior88 |MIT|N/A|
+| NAME                                                                         | VERSION  | LAST UPDATED | LAST UPDATED BY | LICENSE | VULNERABILITIES |
+| :--------------------------------------------------------------------------- | :------- | :----------- | :-------------- | :------ | :-------------- |
+| [@types/react](https://www.npmjs.com/@types/react)                           | v18.2.48 | 01/21/24     | renovate[bot]   | MIT     | N/A             |
+| [@types/react-dom](https://www.npmjs.com/@types/react-dom)                   | v18.2.18 | 01/21/24     | renovate[bot]   | MIT     | N/A             |
+| [crypto-js](https://www.npmjs.com/crypto-js)                                 | v4.2.0   | 12/19/23     | EdiJunior88     | MIT     | N/A             |
+| [eslint-plugin-react](https://www.npmjs.com/eslint-plugin-react)             | v7.33.2  | 01/21/24     | renovate[bot]   | MIT     | N/A             |
+| [eslint-plugin-react-hooks](https://www.npmjs.com/eslint-plugin-react-hooks) | v4.6.0   | 01/21/24     | renovate[bot]   | MIT     | N/A             |
+| [react-bootstrap](https://www.npmjs.com/react-bootstrap)                     | v2.10.0  | 01/21/24     | renovate[bot]   | MIT     | N/A             |
+| [react-datepicker](https://www.npmjs.com/react-datepicker)                   | v4.25.0  | 01/21/24     | renovate[bot]   | MIT     | N/A             |
+| [react-dom](https://www.npmjs.com/react-dom)                                 | v18.2.0  | 01/21/24     | renovate[bot]   | MIT     | N/A             |
+| [react-icons](https://www.npmjs.com/react-icons)                             | v5.0.1   | 01/21/24     | renovate[bot]   | MIT     | N/A             |
+| [react-router-dom](https://www.npmjs.com/react-router-dom)                   | v6.21.3  | 01/21/24     | renovate[bot]   | MIT     | N/A             |
+| [vite](https://www.npmjs.com/vite)                                           | v5.0.12  | 01/19/24     | dependabot[bot] | N/A     | N/A             |
+| [yup](https://www.npmjs.com/yup)                                             | v1.3.3   | 12/19/23     | EdiJunior88     | MIT     | N/A             |
 
 <br/>
 <div align='center'>
