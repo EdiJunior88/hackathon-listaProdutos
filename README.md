@@ -10,66 +10,24 @@
 
 <hr>
 
-<h3><strong>Tecnologias Utilizadas</strong></h3>
+<h3>Tecnologias Utilizadas</h3>
 
-<table>
-  <tr>
-    <td>
-      <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-    </td>
-    <td>
-      <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-    </td>
-    <td>
-      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-    </td>
-     <td>
-      <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
-    </td>
-     <td>
-      <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
-    </td>
-    <td>
-      <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white">
-    </td>
-    <td>
-      <img src="https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white">
-    </td>
-    <td>
-      <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white">
-    </td> 
-</table>
+- <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
+- <img width='25' height='25' src='https://img.stackshare.io/service/1101/C9QJ7V3X.png' alt='Bootstrap'/> [Bootstrap](http://getbootstrap.com/) – Front-End Frameworks
+- <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/1512/logo.png' alt='Airtable'/> [Airtable](https://airtable.com) – Spreadsheets as a Backend
+- <img width='25' height='25' src='https://img.stackshare.io/service/2748/default_5dfbb146cf22182bca88c7d07f2515a5888fc12a.jpg' alt='Netlify'/> [Netlify](https://www.netlify.com/) – Static Web Hosting
+- <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
+- <img width='25' height='25' src='https://img.stackshare.io/service/3350/8261421.png' alt='React Router'/> [React Router](https://github.com/rackt/react-router) – JavaScript Framework Components
+- <img width='25' height='25' src='https://img.stackshare.io/service/8846/preview.png' alt='Formik'/> [Formik](https://jaredpalmer.com/formik/) – Web Forms
+- <img width='25' height='25' src='https://img.stackshare.io/service/10865/default_5551fb8853689f607a2bc0d5a09355d5a3d52bf0.png' alt='date-fns'/> [date-fns](https://date-fns.org/) – Javascript Utilities & Libraries
+- <img width='25' height='25' src='https://img.stackshare.io/service/21547/default_1aeac791cde11ff66cc0b20dcc6144eeb185c905.png' alt='Vite'/> [Vite](https://vitejs.dev/) – JS Build Tools / JS Task Runners
+
+Para ver todas as tecnologias [clique aqui](/techstack.md)
 
 <hr>
 
-<h3><strong>Ferramentas Utilizadas</strong></h3>
-
-<table>
-  <tr>
-    <td>
-      <img src="https://badgen.net/npm/license/lodash">
-    </td>
-    <td>
-      <img src="https://badgen.net/npm/v/express">
-    </td>
-    <td>
-      <img src="https://badgen.net/npm/node/next">
-    </td>
-    <td>
-      <img src="https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label">
-    </td>
-    <td>
-      <img src="https://badgen.net/badge/icon/git?icon=git&label">
-    </td>
-    <td>
-      <img src="https://badgen.net/badge/icon/github?icon=github&label">
-    </td>
-  </tr>
-</table>
-
-<hr>
-
-<h3><strong>Site do Projeto</strong></h3>
+<h3>Site do Projeto</h3>
 <a href="https://hackathon-ninjalist.netlify.app/" target="_blank">https://hackathon-ninjalist.netlify.app/</a>
 
 <br>
@@ -80,7 +38,7 @@
 
 <hr>
 
-<h3><strong>Integrantes do Projeto</strong></h3>
+<h3>Integrantes do Projeto</h3>
 
 <table align='center'>
  <tr>
