@@ -28,7 +28,7 @@ Para ver todas as tecnologias [clique aqui](/techstack.md)
 <hr>
 
 <h3>Site do Projeto</h3>
-<a href="https://hackathon-ninjalist.netlify.app/" target="_blank">https://hackathon-ninjalist.netlify.app/</a>
+<a href="https://edijunior88-ninjalist.netlify.app/" target="_blank">https://edijunior88-ninjalist.netlify.app/</a>
 
 <br>
 
