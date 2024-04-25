@@ -33,7 +33,7 @@ Para ver todas as tecnologias [clique aqui](/techstack.md)
 <br>
 
 <p align="center">
-  <img src="https://api.netlify.com/api/v1/badges/63349d35-a252-4d93-b630-6cbdee8ede55/deploy-status">
+  <img src="https://api.netlify.com/api/v1/badges/987288e6-c134-4152-98d5-0927ca2108e1/deploy-status">
 </p>
 
 <hr>
