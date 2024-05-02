@@ -3,16 +3,16 @@
 ## Tech Stack
 EdiJunior88/hackathon-listaProdutos is built on the following main stack:
 
-- [React](https://reactjs.org/) – Javascript UI Libraries
-- [Bootstrap](http://getbootstrap.com/) – Front-End Frameworks
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
+- [Bootstrap](http://getbootstrap.com/) – Front-End Frameworks
+- [React](https://reactjs.org/) – Javascript UI Libraries
+- [React Router](https://github.com/rackt/react-router) – JavaScript Framework Components
+- [ESLint](http://eslint.org/) – Code Review
+- [Vite](https://vitejs.dev/) – JS Build Tools / JS Task Runners
 - [Airtable](https://airtable.com) – Spreadsheets as a Backend
 - [Netlify](https://www.netlify.com/) – Static Web Hosting
-- [ESLint](http://eslint.org/) – Code Review
-- [React Router](https://github.com/rackt/react-router) – JavaScript Framework Components
 - [Formik](https://jaredpalmer.com/formik/) – Web Forms
 - [date-fns](https://date-fns.org/) – Javascript Utilities & Libraries
-- [Vite](https://vitejs.dev/) – JS Build Tools / JS Task Runners
 
 Full tech stack [here](/techstack.md)
 
@@ -22,16 +22,16 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 EdiJunior88/hackathon-listaProdutos is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
-- <img width='25' height='25' src='https://img.stackshare.io/service/1101/C9QJ7V3X.png' alt='Bootstrap'/> [Bootstrap](http://getbootstrap.com/) – Front-End Frameworks
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/1101/C9QJ7V3X.png' alt='Bootstrap'/> [Bootstrap](http://getbootstrap.com/) – Front-End Frameworks
+- <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
+- <img width='25' height='25' src='https://img.stackshare.io/service/3350/8261421.png' alt='React Router'/> [React Router](https://github.com/rackt/react-router) – JavaScript Framework Components
+- <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
+- <img width='25' height='25' src='https://img.stackshare.io/service/21547/default_1aeac791cde11ff66cc0b20dcc6144eeb185c905.png' alt='Vite'/> [Vite](https://vitejs.dev/) – JS Build Tools / JS Task Runners
 - <img width='25' height='25' src='https://img.stackshare.io/service/1512/logo.png' alt='Airtable'/> [Airtable](https://airtable.com) – Spreadsheets as a Backend
 - <img width='25' height='25' src='https://img.stackshare.io/service/2748/default_5dfbb146cf22182bca88c7d07f2515a5888fc12a.jpg' alt='Netlify'/> [Netlify](https://www.netlify.com/) – Static Web Hosting
-- <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
-- <img width='25' height='25' src='https://img.stackshare.io/service/3350/8261421.png' alt='React Router'/> [React Router](https://github.com/rackt/react-router) – JavaScript Framework Components
 - <img width='25' height='25' src='https://img.stackshare.io/service/8846/preview.png' alt='Formik'/> [Formik](https://jaredpalmer.com/formik/) – Web Forms
 - <img width='25' height='25' src='https://img.stackshare.io/service/10865/default_5551fb8853689f607a2bc0d5a09355d5a3d52bf0.png' alt='date-fns'/> [date-fns](https://date-fns.org/) – Javascript Utilities & Libraries
-- <img width='25' height='25' src='https://img.stackshare.io/service/21547/default_1aeac791cde11ff66cc0b20dcc6144eeb185c905.png' alt='Vite'/> [Vite](https://vitejs.dev/) – JS Build Tools / JS Task Runners
 
 Full tech stack [here](/techstack.md)
 
@@ -43,7 +43,7 @@ Full tech stack [here](/techstack.md)
 
 ![](https://img.stackshare.io/repo.svg "repo") [EdiJunior88/hackathon-listaProdutos](https://github.com/EdiJunior88/hackathon-listaProdutos)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|25<br/>Tools used|02/04/24 <br/>Report generated|
+|26<br/>Tools used|05/02/24 <br/>Report generated|
 |------|------|
 
 </div>
@@ -70,7 +70,7 @@ Full tech stack [here](/techstack.md)
   <br>
   <sub><a href="http://getbootstrap.com/">Bootstrap</a></sub>
   <br>
-  <sub>v5.3.2</sub>
+  <sub>v5.3.3</sub>
 </td>
 
 <td align='center'>
@@ -86,7 +86,7 @@ Full tech stack [here](/techstack.md)
   <br>
   <sub><a href="https://github.com/rackt/react-router">React Router</a></sub>
   <br>
-  <sub>v6.21.3</sub>
+  <sub>v6.23.0</sub>
 </td>
 
 </tr>
@@ -160,7 +160,7 @@ Full tech stack [here](/techstack.md)
   <br>
   <sub><a href="https://jaredpalmer.com/formik/">Formik</a></sub>
   <br>
-  <sub>v2.4.5</sub>
+  <sub>v2.4.6</sub>
 </td>
 
 <td align='center'>
@@ -182,24 +182,25 @@ Full tech stack [here](/techstack.md)
 </tr>
 </table>
 
-## <img src='https://img.stackshare.io/group.svg' /> Open source packages (12)</h2>
+## <img src='https://img.stackshare.io/group.svg' /> Open source packages (13)</h2>
 
-## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (12)
+## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (13)
 
 | NAME                                                                         | VERSION  | LAST UPDATED | LAST UPDATED BY | LICENSE | VULNERABILITIES |
 | :--------------------------------------------------------------------------- | :------- | :----------- | :-------------- | :------ | :-------------- |
-| [@types/react](https://www.npmjs.com/@types/react)                           | v18.2.48 | 01/21/24     | renovate[bot]   | MIT     | N/A             |
-| [@types/react-dom](https://www.npmjs.com/@types/react-dom)                   | v18.2.18 | 01/21/24     | renovate[bot]   | MIT     | N/A             |
+| [@types/react](https://www.npmjs.com/@types/react)                           | v18.2.79 | 04/25/24     | EdiJunior88     | MIT     | N/A             |
+| [@types/react-dom](https://www.npmjs.com/@types/react-dom)                   | v18.2.25 | 04/25/24     | EdiJunior88     | MIT     | N/A             |
 | [crypto-js](https://www.npmjs.com/crypto-js)                                 | v4.2.0   | 12/19/23     | EdiJunior88     | MIT     | N/A             |
-| [eslint-plugin-react](https://www.npmjs.com/eslint-plugin-react)             | v7.33.2  | 01/21/24     | renovate[bot]   | MIT     | N/A             |
-| [eslint-plugin-react-hooks](https://www.npmjs.com/eslint-plugin-react-hooks) | v4.6.0   | 01/21/24     | renovate[bot]   | MIT     | N/A             |
-| [react-bootstrap](https://www.npmjs.com/react-bootstrap)                     | v2.10.0  | 01/21/24     | renovate[bot]   | MIT     | N/A             |
-| [react-datepicker](https://www.npmjs.com/react-datepicker)                   | v4.25.0  | 01/21/24     | renovate[bot]   | MIT     | N/A             |
-| [react-dom](https://www.npmjs.com/react-dom)                                 | v18.2.0  | 01/21/24     | renovate[bot]   | MIT     | N/A             |
-| [react-icons](https://www.npmjs.com/react-icons)                             | v5.0.1   | 01/21/24     | renovate[bot]   | MIT     | N/A             |
-| [react-router-dom](https://www.npmjs.com/react-router-dom)                   | v6.21.3  | 01/21/24     | renovate[bot]   | MIT     | N/A             |
-| [vite](https://www.npmjs.com/vite)                                           | v5.0.12  | 01/19/24     | dependabot[bot] | N/A     | N/A             |
-| [yup](https://www.npmjs.com/yup)                                             | v1.3.3   | 12/19/23     | EdiJunior88     | MIT     | N/A             |
+| [eslint-plugin-react](https://www.npmjs.com/eslint-plugin-react)             | v7.34.1  | 04/25/24     | EdiJunior88     | MIT     | N/A             |
+| [eslint-plugin-react-hooks](https://www.npmjs.com/eslint-plugin-react-hooks) | v4.6.0   | 04/25/24     | EdiJunior88     | MIT     | N/A             |
+| [prop-types](https://www.npmjs.com/prop-types)                               | v15.8.1  | 04/25/24     | EdiJunior88     | MIT     | N/A             |
+| [react-bootstrap](https://www.npmjs.com/react-bootstrap)                     | v2.10.2  | 04/25/24     | EdiJunior88     | MIT     | N/A             |
+| [react-datepicker](https://www.npmjs.com/react-datepicker)                   | v6.9.0   | 04/25/24     | EdiJunior88     | MIT     | N/A             |
+| [react-dom](https://www.npmjs.com/react-dom)                                 | v18.2.0  | 04/25/24     | EdiJunior88     | MIT     | N/A             |
+| [react-icons](https://www.npmjs.com/react-icons)                             | v5.1.0   | 04/25/24     | EdiJunior88     | MIT     | N/A             |
+| [react-router-dom](https://www.npmjs.com/react-router-dom)                   | v6.23.0  | 04/25/24     | EdiJunior88     | MIT     | N/A             |
+| [vite](https://www.npmjs.com/vite)                                           | v5.2.10  | 04/25/24     | EdiJunior88     | N/A     | N/A             |
+| [yup](https://www.npmjs.com/yup)                                             | v1.4.0   | 12/19/23     | EdiJunior88     | MIT     | N/A             |
 
 <br/>
 <div align='center'>
